@@ -24,7 +24,7 @@ const ReadComponent = ({ tno }) => {
 
     const [todo, setTodo] = useState(initState)
 
-    const { moveToList, moveToModify } = useCustomMove()
+    const { page, moveToList, moveToModify } = useCustomMove()
 
     useEffect(() => {
 
@@ -46,7 +46,7 @@ const ReadComponent = ({ tno }) => {
                 <button
                     type="button"
                     className="rounded p-4 m-2 text-xl w-32 text-white bg-blue-500"
-                    onClick={() => moveToList()}
+                    onClick={() => moveToList({page: page})}
                 >
                     List
                 </button>

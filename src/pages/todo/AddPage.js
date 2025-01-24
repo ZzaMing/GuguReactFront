@@ -1,11 +1,14 @@
-const AddPage =() =>{
+import AddComponent from "../../components/todo/AddComponent";
 
-    return(
+const AddPage = () => {
 
-        <div className="text-3xl font-extrabold">
-            Todo Add Page
+    return (
+        <div className="p-4 w-full bg-white">
+            <div className="text-3xl font-extrabold">
+                Todo Add Page
+            </div>
+            <AddComponent />
         </div>
-
     );
 }
 
