@@ -3,7 +3,7 @@ import ModifyComponent from "../../components/todo/ModifyComponent";
 
 const ModifyPage = () => {
 
-    const { tno } = useParams
+    const { tno } = useParams()
 
     return (
         <div className="p-4 w-full bg-white">
