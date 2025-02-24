@@ -15,7 +15,7 @@ const AddComponent = () => {
 
     const [result, setResult] = useState(null)
 
-    const {moveToList} = useCustomMove()
+    const { moveToList } = useCustomMove()
 
     const handleChangeTodo = (e) => {
 
@@ -47,7 +47,10 @@ const AddComponent = () => {
     return (
         <div className="border-2 border-sky-200 mt-10 m-2 p-4">
             {result
-                ? <ResultModal title={'Add Result'} content={`New ${result} Added`} callbackFn={closeModal} />
+                ? <ResultModal
+                    title={'Add Result'}
+                    content={`New ${result} Added`}
+                    callbackFn={closeModal} />
                 : <></>}
             <div className="flex justify-center">
                 <div className="relative mb-4 flex w-full flex-wrap items-stretch">
