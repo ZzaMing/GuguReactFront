@@ -3,6 +3,7 @@ import useCustomMove from "../../hooks/useCustomMove"
 import FetchingModal from "../common/FetchingModal"
 import { getList } from "../../api/productsApi"
 import { API_SERVER_HOST } from "../../api/todoApi"
+import PageComponent from "../common/PageComponent"
 
 
 const host = API_SERVER_HOST
@@ -26,7 +27,6 @@ const ListComponent = () => {
 
     const [serverData, setServerData] = useState(initState)
 
-    //for FetchingModal
     const [fetching, setFetching] = useState(false)
 
     useEffect(() => {
@@ -46,8 +46,8 @@ const ListComponent = () => {
             {fetching ? <FetchingModal /> : <></>}
 
             <div className="flex flex-wrap mx-auto p-6">
-                
-                {serverData.dtoList.map(product =>      
+
+                {serverData.dtoList.map(product =>
                     <div
                         key={product.pno}
                         className="w-1/2 p-1 rounded shadow-md border-2"
@@ -78,6 +78,9 @@ const ListComponent = () => {
                     </div>
                 )}
             </div>
+
+            <PageComponent serverData={serverData} movePage={moveToList} />
+
         </div>
     )
 }
