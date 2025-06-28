@@ -28,3 +28,12 @@ export const getOne = async (pno) => {
 
     return res.data
 }
+
+export const putOne = async (pno, product) => {
+
+    const header = {headers: {"Content-Type": "multipart/form-data"}}
+
+    const res = await axios.put(`${prefix}/${pno}`, product, header)
+
+    return res.data
+}
